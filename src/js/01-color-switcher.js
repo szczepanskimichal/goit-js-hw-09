@@ -6,7 +6,7 @@ let randomColorBg;
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
-
+//START
 startBtnEl.addEventListener('click', () => {
   randomColorBg = setInterval(() => {
     document.body.style.backgroundColor = getRandomHexColor();
@@ -15,7 +15,7 @@ startBtnEl.addEventListener('click', () => {
     stopBtnEl.disabled = false;
   }, 1000);
 });
-
+//STOP
 stopBtnEl.addEventListener('click', () => {
   clearInterval(randomColorBg);
   console.log('stopped');
