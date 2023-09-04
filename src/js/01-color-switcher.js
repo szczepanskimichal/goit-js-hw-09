@@ -17,3 +17,10 @@ startBtnEl.addEventListener(
   },
   1000
 );
+//STOP
+stopBtnEl.addEventListener('click', () => {
+  clearInterval(randomColorBg);
+  console.log('stopped');
+  startBtnEl.disabled = false;
+  stopBtnEl.disabled = true;
+});
