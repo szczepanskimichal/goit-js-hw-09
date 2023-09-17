@@ -63,10 +63,10 @@ const options = {
           secondsEl.innerHTML = addLeadingZero(differenceToObject.seconds);
 
           if (
-            daysEl.innerHTML === '00' &&
-            hoursEl.innerHTML === '00' &&
-            minutesEl.innerHTML === '00' &&
-            secondsEl.innerHTML === '00'
+            daysEl.innerHTML < '00' &&
+            hoursEl.innerHTML < '00' &&
+            minutesEl.innerHTML < '00' &&
+            secondsEl.innerHTML < '00'
           ) {
             clearInterval(timer);
             Notiflix.Notify.success('Countdown finished!');
